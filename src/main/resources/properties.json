@@ -1,0 +1,44 @@
+{
+  "rule_set": [
+    {
+      "xpath": "/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/NumberOfConsumerSalesGross",
+      "rules": [
+        {
+          "type": "REPLACE",
+          "match": "*",
+          "replacement": "0"
+        }
+      ]
+    },
+    {
+      "xpath": "/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/NumberOfUnitAdjustments",
+      "rules": [
+        {
+          "type": "REPLACE",
+          "match": "\\d",
+          "replacement": "rep"
+        }
+      ]
+    },
+    {
+      "xpath": "/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/NumberOfFreeUnitsToConsumers",
+      "rules": [
+        {
+          "type": "REPLACE",
+          "match": "\\s",
+          "replacement": "newString"
+        }
+      ]
+    },
+    {
+      "xpath": "/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/PriceConsumerPaidExcSalesTax",
+      "rules": [
+        {
+          "type": "REPLACE",
+          "match": "*",
+          "replacement": "0"
+        }
+      ]
+    }
+  ]
+}
