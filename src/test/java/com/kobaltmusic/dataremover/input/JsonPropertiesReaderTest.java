@@ -26,7 +26,7 @@ public class JsonPropertiesReaderTest {
         Map<String, XPathRule> properties = reader.read(Paths.get(resource.toURI()).toString());
         assertThat(properties).hasSize(4);
 
-        assertThat(properties.get("/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/NumberOfConsumerSalesGross"))
+        assertThat(properties.get("/world/Europe/United Kingdom/London"))
                 .isNotNull()
                 .matches(xPathRule -> xPathRule.getRuleSet().size() == 1)
                 .matches(xPathRule ->
@@ -35,7 +35,7 @@ public class JsonPropertiesReaderTest {
                     return rule instanceof ContentReplaceRule && rule.equals(new ContentReplaceRule("*", "0"));
                 }, "Rule match");
 
-        assertThat(properties.get("/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/NumberOfUnitAdjustments"))
+        assertThat(properties.get("/wines/Italy/Piemonte/Barolo"))
                 .isNotNull()
                 .matches(xPathRule -> xPathRule.getRuleSet().size() == 1)
                 .matches(xPathRule ->
@@ -44,7 +44,7 @@ public class JsonPropertiesReaderTest {
                     return rule instanceof ContentReplaceRule && rule.equals(new ContentReplaceRule("\\d", "rep"));
                 }, "Rule match");
 
-        assertThat(properties.get("/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/NumberOfFreeUnitsToConsumers"))
+        assertThat(properties.get("/company/employees/ceo"))
                 .isNotNull()
                 .matches(xPathRule -> xPathRule.getRuleSet().size() == 1)
                 .matches(xPathRule ->
@@ -53,7 +53,7 @@ public class JsonPropertiesReaderTest {
                     return rule instanceof ContentReplaceRule && rule.equals(new ContentReplaceRule("\\s", "newString"));
                 }, "Rule match");
 
-        assertThat(properties.get("/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/PriceConsumerPaidExcSalesTax"))
+        assertThat(properties.get("/books/adventure/abook"))
                 .isNotNull()
                 .matches(xPathRule -> xPathRule.getRuleSet().size() == 1)
                 .matches(xPathRule ->
@@ -61,6 +61,9 @@ public class JsonPropertiesReaderTest {
                     Rule rule = xPathRule.getRuleSet().stream().findFirst().get();
                     return rule instanceof ContentReplaceRule && rule.equals(new ContentReplaceRule("*", "0"));
                 }, "Rule match");
+
+        assertThat(properties.get("/non/existing/xpath"))
+                .isNull();
     }
 
 }

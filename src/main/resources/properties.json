@@ -1,7 +1,7 @@
 {
   "rule_set": [
     {
-      "xpath": "/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/NumberOfConsumerSalesGross",
+      "xpath": "/world/Europe/United Kingdom/London",
       "rules": [
         {
           "type": "REPLACE",
@@ -11,7 +11,7 @@
       ]
     },
     {
-      "xpath": "/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/NumberOfUnitAdjustments",
+      "xpath": "/wines/Italy/Piemonte/Barolo",
       "rules": [
         {
           "type": "REPLACE",
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "xpath": "/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/NumberOfFreeUnitsToConsumers",
+      "xpath": "/company/employees/ceo",
       "rules": [
         {
           "type": "REPLACE",
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "xpath": "/dsr:SalesReportToSocietyMessage/SalesReport/SalesByCommercialModel/SalesByTerritory/ReleaseTransactions/SalesTransaction/SalesData/PriceConsumerPaidExcSalesTax",
+      "xpath": "/books/adventure/abook",
       "rules": [
         {
           "type": "REPLACE",
