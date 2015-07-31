@@ -1,8 +1,8 @@
-package com.kobaltmusic.dataremover.input;
+package com.onegambler.dataremover.input;
 
-import com.kobaltmusic.dataremover.core.ContentReplaceRule;
-import com.kobaltmusic.dataremover.core.Rule;
-import com.kobaltmusic.dataremover.xml.manipulation.XPathRule;
+import com.onegambler.dataremover.core.ContentReplaceRule;
+import com.onegambler.dataremover.core.Rule;
+import com.onegambler.dataremover.xml.manipulation.XPathRule;
 import org.junit.Test;
 
 import java.io.IOException;

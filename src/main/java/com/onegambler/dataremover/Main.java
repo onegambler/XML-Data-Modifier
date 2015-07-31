@@ -1,7 +1,7 @@
-package com.kobaltmusic.dataremover;
+package com.onegambler.dataremover;
 
 import com.google.common.base.Stopwatch;
-import com.kobaltmusic.dataremover.xml.XMLConverter;
+import com.onegambler.dataremover.xml.XMLConverter;
 import org.slf4j.LoggerFactory;
 
 import java.nio.file.Files;

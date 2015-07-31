@@ -1,8 +1,8 @@
-package com.kobaltmusic.dataremover.xml.parsing;
+package com.onegambler.dataremover.xml.parsing;
 
-import com.kobaltmusic.dataremover.core.ContentRule;
-import com.kobaltmusic.dataremover.core.Rule;
-import com.kobaltmusic.dataremover.xml.manipulation.XmlRuleSet;
+import com.onegambler.dataremover.core.ContentRule;
+import com.onegambler.dataremover.core.Rule;
+import com.onegambler.dataremover.xml.manipulation.XmlRuleSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;

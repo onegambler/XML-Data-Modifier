@@ -1,11 +1,9 @@
-package com.kobaltmusic.dataremover.xml.parsing;
+package com.onegambler.dataremover.xml.parsing;
 
 import com.google.common.collect.ImmutableSet;
-import com.kobaltmusic.dataremover.core.ContentReplaceRule;
-import com.kobaltmusic.dataremover.core.ContentRule;
-import com.kobaltmusic.dataremover.core.Rule;
-import com.kobaltmusic.dataremover.xml.manipulation.XmlRuleSet;
-import org.assertj.core.api.Assertions;
+import com.onegambler.dataremover.core.ContentReplaceRule;
+import com.onegambler.dataremover.core.ContentRule;
+import com.onegambler.dataremover.xml.manipulation.XmlRuleSet;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,8 +16,6 @@ import java.io.Writer;
 import java.util.Collections;
 import java.util.Set;
 
-import static com.kobaltmusic.dataremover.xml.parsing.SAXTransformationHandler.END_TAG;
-import static com.kobaltmusic.dataremover.xml.parsing.SAXTransformationHandler.START_TAG;
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
@@ -69,9 +65,9 @@ public class SAXTransformationHandlerTest {
 
         handler.startElement(null, null, ELEMENT_NAME, mockAttribute);
 
-        verify(writer, times(1)).write(START_TAG);
+        verify(writer, times(1)).write(SAXTransformationHandler.START_TAG);
         verify(writer, times(1)).write(ELEMENT_NAME);
-        verify(writer, times(1)).write(END_TAG);
+        verify(writer, times(1)).write(SAXTransformationHandler.END_TAG);
         verify(xPathHandler).enterNode(ELEMENT_NAME);
         verifyNoMoreInteractions(writer, ruleSet, xPathHandler);
     }
@@ -85,7 +81,7 @@ public class SAXTransformationHandlerTest {
 
         handler.startElement(null, null, ELEMENT_NAME, mockAttribute);
 
-        verify(writer, times(1)).write(START_TAG);
+        verify(writer, times(1)).write(SAXTransformationHandler.START_TAG);
         verify(writer, times(1)).write(ELEMENT_NAME);
 
         verify(writer, times(1)).write(" ");
@@ -93,7 +89,7 @@ public class SAXTransformationHandlerTest {
         verify(writer, times(1)).write("=\"");
         verify(writer, times(1)).write(any(char[].class), anyInt(), anyInt());
         verify(writer, times(1)).write("\"");
-        verify(writer, times(1)).write(END_TAG);
+        verify(writer, times(1)).write(SAXTransformationHandler.END_TAG);
 
         verify(xPathHandler, times(1)).enterNode(ELEMENT_NAME);
         verifyNoMoreInteractions(writer, ruleSet, xPathHandler);

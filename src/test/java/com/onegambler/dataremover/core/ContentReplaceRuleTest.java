@@ -1,4 +1,4 @@
-package com.kobaltmusic.dataremover.core;
+package com.onegambler.dataremover.core;
 
 import org.junit.Test;
 

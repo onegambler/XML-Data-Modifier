@@ -1,8 +1,8 @@
-package com.kobaltmusic.dataremover.xml.manipulation;
+package com.onegambler.dataremover.xml.manipulation;
 
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableSet;
-import com.kobaltmusic.dataremover.core.Rule;
+import com.onegambler.dataremover.core.Rule;
 
 import java.util.Map;
 import java.util.Optional;

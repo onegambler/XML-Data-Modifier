@@ -1,6 +1,6 @@
-package com.kobaltmusic.dataremover.xml.manipulation;
+package com.onegambler.dataremover.xml.manipulation;
 
-import com.kobaltmusic.dataremover.core.Rule;
+import com.onegambler.dataremover.core.Rule;
 
 import java.util.Set;
 

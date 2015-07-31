@@ -1,9 +1,9 @@
-package com.kobaltmusic.dataremover.xml;
+package com.onegambler.dataremover.xml;
 
-import com.kobaltmusic.dataremover.xml.manipulation.XPathRule;
-import com.kobaltmusic.dataremover.input.JsonPropertiesReader;
-import com.kobaltmusic.dataremover.xml.manipulation.XmlRuleSet;
-import com.kobaltmusic.dataremover.xml.parsing.SAXTransformationHandler;
+import com.onegambler.dataremover.xml.manipulation.XPathRule;
+import com.onegambler.dataremover.input.JsonPropertiesReader;
+import com.onegambler.dataremover.xml.manipulation.XmlRuleSet;
+import com.onegambler.dataremover.xml.parsing.SAXTransformationHandler;
 import org.xml.sax.XMLReader;
 
 import javax.xml.parsers.SAXParser;

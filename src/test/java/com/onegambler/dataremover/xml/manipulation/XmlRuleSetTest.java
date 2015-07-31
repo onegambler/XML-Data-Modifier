@@ -1,15 +1,14 @@
-package com.kobaltmusic.dataremover.xml.manipulation;
+package com.onegambler.dataremover.xml.manipulation;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import com.kobaltmusic.dataremover.core.ContentReplaceRule;
-import com.kobaltmusic.dataremover.core.ContentRule;
-import com.kobaltmusic.dataremover.core.SkipRule;
+import com.onegambler.dataremover.core.ContentReplaceRule;
+import com.onegambler.dataremover.core.ContentRule;
+import com.onegambler.dataremover.core.SkipRule;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -1,4 +1,4 @@
-package com.kobaltmusic.dataremover.xml.parsing;
+package com.onegambler.dataremover.xml.parsing;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.kobaltmusic.dataremover.xml.parsing;
+package com.onegambler.dataremover.xml.parsing;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
