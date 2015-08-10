@@ -39,6 +39,24 @@
           "replacement": "0"
         }
       ]
+    },
+    {
+      "xpath": "/CATALOG/PLANT/PRICE",
+      "rules": [
+        {
+          "type": "REPLACE",
+          "match": "*",
+          "replacement": "0"
+        }
+      ]
+    },
+    {
+      "xpath": "/PATH/TO/SKIP",
+      "rules": [
+        {
+          "type": "SKIP"
+        }
+      ]
     }
   ]
 }
