@@ -1,4 +1,4 @@
-# XML-Data-Remover
+# XML Data Modifier
 XML processing library which allows to modify an xml by replacing its content or removing nodes.
 
 Project description
