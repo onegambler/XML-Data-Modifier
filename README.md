@@ -13,11 +13,15 @@ In order to define the changes requested a configuration file must be specify co
 
     { "rule_set": 
     [ { "xpath": "/xml/path/to/change",
-      "rules": [ {
-          "type": "REPLACE",
+      "rules": [ 
+      { "type": "REPLACE",
           "match": "*",
           "replacement": "0"
-      } ]
+      },
+      { "xpath": "/xml/path/to/skip",
+        "rules": [ 
+        { "type": "SKIP"}
+      }]
     } ] }
 
 How to use
