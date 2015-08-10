@@ -26,7 +26,12 @@ In order to define the changes requested a configuration file must be specify co
 
 How to use
 ------
-The library can be imported in an existing project or run as standalone jar.
+The library 
+* can be imported in an existing project 
+
+    new XMLConverter(inputFile, outputFile, configurationFile).convert();
+    
+* run as standalone jar.
 
     Usage: "java -jar <library> -i inputFilePath [-o outputFile] [-p propertyFilePath]"
 
