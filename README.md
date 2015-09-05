@@ -12,27 +12,31 @@ Configuration
 In order to define the changes requested a configuration file must be specify containing all the rules to apply on the document. Each rule is specific for each xpath defined. A _skip_ rule also applies to that node children. It follows json sintax. The REPLACE rule uses regular expressions to match the string. It's also possible to simply define "*" in order to replace the whole tag content.
 
     { "rule_set": 
-    [ { "xpath": "/xml/path/to/change",
-      "rules": [ 
-      { "type": "REPLACE",
-          "match": "*",
-          "replacement": "0"
-      },
-      { "xpath": "/xml/path/to/skip",
-        "rules": [ 
-        { "type": "SKIP"}
-      }]
-    } ] }
+        [   { 
+                "xpath": "/xml/path/to/change",
+                "rules": [
+                    {   "type": "REPLACE",
+                        "match": "*",
+                        "replacement": "0"
+                    }
+                ]
+            }, { 
+                "xpath": "/xml/path/to/skip",
+                "rules": [ { "type": "SKIP"} ]
+            }
+        ]
+    }
+    
+        
 
 How to use
 ------
 The library 
-* can be imported in an existing project 
+
+can be imported in an existing project 
 
     new XMLConverter(inputFile, outputFile, configurationFile).convert();
     
-* run as standalone jar.
+run as standalone jar.
 
     Usage: "java -jar <library> -i inputFilePath [-o outputFile] [-p propertyFilePath]"
-
-
